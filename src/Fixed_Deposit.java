@@ -275,7 +275,7 @@ public class Fixed_Deposit extends javax.swing.JFrame {
         jPanel1.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 516, 84, -1));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/istockphoto-1556151051-1024x1024.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fixed_Deposite.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 570));
 
         jTable1.setBackground(new java.awt.Color(102, 102, 102));

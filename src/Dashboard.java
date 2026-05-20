@@ -138,7 +138,7 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1.add(btnClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(476, 376, 90, 40));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/istockphoto-1328439729-1024x1024.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/DashBoard.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 480));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

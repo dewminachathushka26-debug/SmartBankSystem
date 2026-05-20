@@ -106,7 +106,7 @@ public class LoginForm extends javax.swing.JFrame {
         jPanel1.add(pPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 240, -1));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/istockphoto-2124792712-1024x1024.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Login.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 340));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
