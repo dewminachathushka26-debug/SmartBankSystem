@@ -11,8 +11,8 @@ public class Customer extends javax.swing.JFrame {
      * Creates new form Customer
      */
     public Customer() {
-        initComponents();
-        loadCustomerTable();
+        initComponents();  //button,labels,textfields load
+        loadCustomerTable(); // c_data tabel load 
     }
 
     /**
@@ -193,7 +193,7 @@ public class Customer extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Customer.jpeg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 470));
 
-        tblCustomer.setBackground(new java.awt.Color(102, 102, 102));
+        tblCustomer.setBackground(new java.awt.Color(255, 255, 255));
         tblCustomer.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -248,26 +248,26 @@ public class Customer extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     public void loadCustomerTable() {
-
+        
     try {
 
         Connection con = DBConnect.getConnection();
 
         String sql = "SELECT * FROM customer_profiles";
 
-        PreparedStatement pst = con.prepareStatement(sql);
+        PreparedStatement pst = con.prepareStatement(sql);  // query execute and prepare
 
         java.sql.ResultSet rs = pst.executeQuery();
 
         javax.swing.table.DefaultTableModel model =
-        (javax.swing.table.DefaultTableModel) tblCustomer.getModel();
+        (javax.swing.table.DefaultTableModel) tblCustomer.getModel(); ////JTable model access
 
-        model.setRowCount(0);
+        model.setRowCount(0); // Table is refreshing old rows clear
 
-        while (rs.next()) {
+        while (rs.next()) {                         //read the database rows 
 
             Object[] row = {
-                rs.getInt("customer_id"),
+                rs.getInt("customer_id"),  
                 rs.getString("full_name"),
                 rs.getString("nic_no"),
                 rs.getString("phone"),
@@ -292,17 +292,17 @@ public class Customer extends javax.swing.JFrame {
 
         Connection con = DBConnect.getConnection();
 
-        String sql = "INSERT INTO customer_profiles(full_name,nic_no,phone,email,address) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO customer_profiles(full_name,nic_no,phone,email,address) VALUES (?,?,?,?,?)";        // Insert the new customer record to Database
 
         PreparedStatement pst = con.prepareStatement(sql);
 
-        pst.setString(1, tName.getText());
+        pst.setString(1, tName.getText());            //TextField value database query to pass
         pst.setString(2, tNIC.getText());
         pst.setString(3, tPhone.getText());
         pst.setString(4, tEmail.getText());
         pst.setString(5, tAddress.getText());
 
-        pst.executeUpdate();
+        pst.executeUpdate();                          //INSERT query executing
 
         JOptionPane.showMessageDialog(this, "Customer Added Successfully!");
 

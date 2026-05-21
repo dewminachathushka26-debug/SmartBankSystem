@@ -210,7 +210,7 @@ public class Dashboard extends javax.swing.JFrame {
 );
 
         JasperReport jr = JasperCompileManager.compileReport(
-                "src/Customer_Report.jrxml"
+                "src/Customer_Report_1.jrxml"
         );
 
         JasperPrint jp = JasperFillManager.fillReport(
